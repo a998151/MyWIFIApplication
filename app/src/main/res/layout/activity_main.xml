@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#009688"
+    android:background="#FEF9E7"
     tools:context="com.example.alemon.mywifiapplication.MainActivity">
 
     <ImageView
@@ -13,8 +13,9 @@
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/status_bar"
         android:scaleType="fitStart"
+        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentEnd="true" />
 
 
     <TextView
@@ -22,9 +23,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="TextView"
-        android:layout_marginTop="63dp"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_marginTop="18dp"
+        android:layout_marginLeft="90dp"
+        />
 
     <!--
     <TextView
@@ -57,65 +58,71 @@
 
     <ImageButton
         android:id="@+id/ib_Top"
-        android:src="@drawable/top"
         android:layout_width="70dp"
         android:layout_height="70dp"
         android:scaleType="centerCrop"
-        android:background="#00000000"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="320dp" />
+        android:background="@drawable/top_selector"
+        android:layout_marginTop="300dp"
+        android:layout_marginLeft="35dp"
+        />
 
     <ImageButton
         android:id="@+id/ib_Bottom"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:src="@drawable/bottom"
         android:scaleType="centerCrop"
-        android:background="#00000000"
-        android:layout_marginStart="35dp"
-        android:layout_marginTop="470dp"/>
+        android:background="@drawable/bottom_selector"
+        android:layout_marginTop="450dp"
+        android:layout_marginLeft="35dp"
+        />
 
     <ImageButton
         android:id="@+id/ib_M"
         android:layout_width="70dp"
         android:layout_height="70dp"
-        android:src="@drawable/letter_m"
         android:scaleType="centerCrop"
-        android:background="#00000000"
-        android:layout_marginStart="150dp"
-        android:layout_marginTop="390dp"/>
+        android:background="@drawable/letter_m_selector"
+        android:layout_marginTop="380dp"
+        android:layout_marginLeft="145dp"
+        />
 
     <ImageButton
         android:id="@+id/ib_One"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:src="@drawable/number1"
         android:scaleType="centerCrop"
-        android:background="#00000000"
-        android:layout_marginStart="270dp"
-        android:layout_marginTop="270dp" />
+        android:background="@drawable/number1_selector"
+        android:layout_marginTop="260dp"
+        android:layout_marginLeft="260dp"
+        />
 
     <ImageButton
         android:id="@+id/ib_Two"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:src="@drawable/number2"
         android:scaleType="centerCrop"
-        android:background="#00000000"
-        android:layout_marginStart="270dp"
-        android:layout_marginTop="390dp" />
+        android:background="@drawable/number2_selector"
+        android:layout_marginTop="385dp"
+        android:layout_marginLeft="260dp"
+        />
 
     <ImageButton
         android:id="@+id/ib_Three"
         android:layout_width="60dp"
         android:layout_height="60dp"
-        android:src="@drawable/number3"
         android:scaleType="centerCrop"
-        android:background="#00000000"
-        android:layout_marginStart="270dp"
-        android:layout_marginTop="510dp" />
+        android:background="@drawable/number3_selector"
+        android:layout_marginTop="510dp"
+        android:layout_marginLeft="260dp"
+         />
 
 
+    <ImageButton
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:srcCompat="@android:drawable/ic_menu_myplaces"
+        android:background="#00000000"/>
 
 
 </RelativeLayout>

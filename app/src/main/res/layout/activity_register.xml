@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/registerbackground"
+    tools:context="com.example.alemon.mywifiapplication.RegisterActivity">
+
+    <ImageView
+        android:id="@+id/register_logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="28dp" />
+
+    <ImageView
+        android:id="@+id/register_title"
+        android:layout_width="220dp"
+        android:layout_height="100dp"
+        android:src="@drawable/registertitle"
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="90dp" />
+
+    <!--
+    <TextView
+        android:id="@+id/registerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/text_color"
+        android:clickable="true"
+        android:textSize="28dp"
+        android:text="Welcome to register"
+        android:layout_marginTop="110dp"
+        android:layout_marginLeft="52dp"
+         />
+         -->
+
+    <EditText
+        android:id="@+id/register_username"
+        android:hint="用户名"
+        android:textColorHint="#707B7C"
+        android:textColor="#28B463"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="230dp"
+        android:layout_marginLeft="80dp"
+        android:inputType="textPersonName"
+        />
+
+    <EditText
+        android:id="@+id/register_password"
+        android:hint="密码"
+        android:textColorHint="#707B7C"
+        android:textColor="#28B463"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="280dp"
+        android:layout_marginLeft="80dp"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/register_ask1"
+        android:hint="你小学学校名称"
+        android:textColorHint="#707B7C"
+        android:textColor="#28B463"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="330dp"
+        android:layout_marginLeft="80dp"
+        android:inputType="textPersonName"
+        />
+
+    <EditText
+        android:id="@+id/register_ask2"
+        android:hint="你中学学校名称"
+        android:textColorHint="#707B7C"
+        android:textColor="#28B463"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="380dp"
+        android:layout_marginLeft="80dp"
+        android:inputType="textPersonName"
+        />
+
+    <Button
+        android:id="@+id/register_button_1"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/register_username"
+        android:layout_marginTop="500dp"
+        android:text="register"
+        android:textSize="20dp"
+        android:textColor="@color/register_button_selector"
+        android:background="@drawable/register_button_shape"
+        />
+
+</RelativeLayout>

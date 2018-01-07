@@ -1,18 +1,14 @@
 package com.example.alemon.mywifiapplication;
 
 import android.content.Context;
-import android.graphics.ColorMatrixColorFilter;
+import android.content.Intent;
 import android.net.DhcpInfo;
 import android.net.wifi.WifiManager;
-import android.os.Handler;
-import android.os.Message;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.format.Formatter;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.Window;
-import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
 
@@ -32,18 +28,17 @@ public class MainActivity extends AppCompatActivity {
     TextView textView,textView_1;//静态文本类
     DhcpInfo dhcp;//服务器信息类
     String str;
+    private ImageButton login;
 
 
     //发送数据函数，一切控制都由此产生，是本程序最重要的方法
-    void send(byte[] ch)
-    {
+    public void send(byte[] ch) {
         try {
             client=new Socket(str,8080);//连接服务器，IP随热点，端口是5000
             os=client.getOutputStream();//初始化输出
             os.write(ch);//输出数据
             os.close();//关闭输出
             client.close();//关闭网络
-            //下面4句是系统自动添加的
         } catch (UnknownHostException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -59,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 //        bt1=(Button)this.findViewById(R.id.bt1);
 //        bt2=(Button)this.findViewById(R.id.bt2);
         /**
-         *  定义相关View
+         *  初始化相关的按键
         */
         ib_Top=(ImageButton)this.findViewById(R.id.ib_Top);
         ib_Bottom=(ImageButton)this.findViewById(R.id.ib_Bottom);
@@ -110,6 +105,9 @@ public class MainActivity extends AppCompatActivity {
         //设置相关的View
         textView.setText("连接IP地址为："+str);
 
+        /**
+         * 点击发送数据
+         */
         ib_Top.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -120,10 +118,12 @@ public class MainActivity extends AppCompatActivity {
 //                        Message message=new Message();
 //                        message.what=TCP_TEXT_1;
 //                        handler.sendMessage(message);
+                        System.out.println("成功发送");
                     }
                 }).start();
             }
         });
+
 
         ib_Bottom.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -197,6 +197,17 @@ public class MainActivity extends AppCompatActivity {
 //                        handler.sendMessage(message);
                     }
                 }).start();
+            }
+        });
+
+
+        //用于测试 Intent
+        login=(ImageButton)findViewById(R.id.login);
+        login.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v){
+                Intent intent=new Intent(MainActivity.this,SecondActivty.class);
+                startActivity(intent);
             }
         });
     }

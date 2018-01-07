@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.alemon.mywifiapplication.SecondActivty"
+    android:background="@drawable/loginbackgroud"
+    android:padding="8dp"
+    >
+
+    <Button
+        android:id="@+id/create_database"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="create database"
+        />
+
+    <Button
+        android:id="@+id/add_database"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="add data"
+        android:layout_below="@+id/create_database"
+        android:layout_alignParentStart="true"
+        />
+
+    <ImageView
+        android:id="@+id/login_logo"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:src="@drawable/logo"
+        android:layout_marginLeft="120dp"
+        android:layout_marginTop="28dp"
+        />
+
+    <ImageView
+        android:id="@+id/login_title"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:src="@drawable/logintitle"
+        android:layout_marginLeft="75dp"
+        android:layout_marginTop="130dp"
+        />
+
+
+    <EditText
+        android:id="@+id/login_username"
+        android:hint="用户名"
+        android:textColorHint="#c2c5c9"
+        android:textColor="#c2c5c9"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="230dp"
+        android:layout_marginLeft="80dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        />
+
+    <EditText
+        android:id="@+id/login_password"
+        android:hint="密码"
+        android:textColorHint="#c2c5c9"
+        android:textColor="#c2c5c9"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="280dp"
+        android:layout_marginLeft="80dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        />
+
+    <Button
+        android:id="@+id/login_button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/login_username"
+        android:text="Login"
+        android:layout_marginTop="350dp"
+        android:textColor="@color/login_button_selector"
+        android:background="@drawable/login_button_shape"
+        />
+
+    <Button
+        android:id="@+id/register_button"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/login_button"
+        android:text="Register"
+        android:layout_marginTop="400dp"
+        android:textColor="@color/login_button_selector"
+        android:background="@drawable/register_button_shape"
+        />
+
+    <TextView
+        android:id="@+id/forget_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="忘记密码？"
+        android:textColor="@color/text_color"
+        android:layout_marginTop="500dp"
+        android:layout_marginLeft="290dp"/>
+
+</RelativeLayout>
+

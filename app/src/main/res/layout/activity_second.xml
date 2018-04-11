@@ -10,21 +10,6 @@
     android:padding="8dp"
     >
 
-    <Button
-        android:id="@+id/create_database"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="create database"
-        />
-
-    <Button
-        android:id="@+id/add_database"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="add data"
-        android:layout_below="@+id/create_database"
-        android:layout_alignParentStart="true"
-        />
 
     <ImageView
         android:id="@+id/login_logo"

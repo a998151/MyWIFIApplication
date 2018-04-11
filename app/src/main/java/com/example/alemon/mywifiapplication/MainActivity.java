@@ -2,6 +2,7 @@ package com.example.alemon.mywifiapplication;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.DhcpInfo;
 import android.net.wifi.WifiManager;
 import android.support.v7.app.AppCompatActivity;
@@ -11,6 +12,8 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.TextView;
+
+import com.hjm.bottomtabbar.BottomTabBar;
 
 import java.io.IOException;
 import java.io.OutputStream;
@@ -56,18 +59,26 @@ public class MainActivity extends AppCompatActivity {
         /**
          *  初始化相关的按键
         */
-        ib_Top=(ImageButton)this.findViewById(R.id.ib_Top);
-        ib_Bottom=(ImageButton)this.findViewById(R.id.ib_Bottom);
-        ib_M=(ImageButton)this.findViewById(R.id.ib_M);
-        ib_One=(ImageButton)this.findViewById(R.id.ib_One);
-        ib_Two=(ImageButton)this.findViewById(R.id.ib_Two);
-        ib_Three=(ImageButton)this.findViewById(R.id.ib_Three);
+        ib_Top=(ImageButton)findViewById(R.id.ib_Top);
+        ib_Bottom=(ImageButton)findViewById(R.id.ib_Bottom);
+        ib_M=(ImageButton)findViewById(R.id.ib_M);
+        ib_One=(ImageButton)findViewById(R.id.ib_One);
+        ib_Two=(ImageButton)findViewById(R.id.ib_Two);
+        ib_Three=(ImageButton)findViewById(R.id.ib_Three);
 
         textView=(TextView)this.findViewById(R.id.textView1) ;
 //        textView_1=(TextView)this.findViewById(R.id.textView2);
 
+        BottomTabBar bottomTabBar = (BottomTabBar)findViewById(R.id.bottomTabBar);
 
-
+        bottomTabBar.init(getSupportFragmentManager()).setFontSize(8)
+                .setChangeColor(Color.RED,Color.DKGRAY)
+                //参数1：文字内容。参数2：导航图片。参数3：切换哪个fragment类
+                .addTabItem("控制",R.mipmap.control,ControlFragment.class)
+                .addTabItem("用户管理",R.mipmap.usermanager,UserManagerFragment.class)
+                //是否显示导航和上边的fragment的区分线(黑色的线太难看了一般我不喜欢在那里设)
+                //false为不显示那条区分线，true为显示那条区分线
+                .isShowDivider(true);
 
         /**
          *  Handler 用于在子线程中更新UI

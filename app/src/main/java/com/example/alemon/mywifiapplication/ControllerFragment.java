@@ -50,7 +50,6 @@ public class ControllerFragment extends Fragment {
         sendMsg = new SendMsg(this);
         sendMsg.sendMsg(R.id.test_button,button,"Test Success !");
 
-
         //初始化与绑定控件
         sendData = new SendData(this);
         sendData.sendMsg(R.id.ib_One,ib_One,"one");

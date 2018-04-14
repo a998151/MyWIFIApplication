@@ -8,5 +8,4 @@ import android.view.View;
 
 public interface MsgTool {
     void sendMsg(int x, View view, final String myMessage );
-//    void sendData(int x,View view, final String myData );
 }

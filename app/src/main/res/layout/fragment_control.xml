@@ -7,6 +7,12 @@
     android:background="#FEF9E7"
     tools:context="com.example.alemon.mywifiapplication.MainActivity">
 
+    <Button
+        android:id="@+id/test_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Button"/>
+
     <ImageView
         android:id="@+id/imageView"
         android:layout_width="wrap_content"

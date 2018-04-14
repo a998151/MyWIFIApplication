@@ -37,13 +37,13 @@ public class SecondActivty extends AppCompatActivity {
 
 
         //1. 建表
-        Button createDatabase=(Button)findViewById(R.id.create_database);
-        createDatabase.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                dbHelper.getWritableDatabase();
-            }
-        });
+//        Button createDatabase=(Button)findViewById(R.id.create_database);
+//        createDatabase.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                dbHelper.getWritableDatabase();
+//            }
+//        });
 
 //        //2. 写入数据
 //        add_database=(Button)findViewById(R.id.add_database);
